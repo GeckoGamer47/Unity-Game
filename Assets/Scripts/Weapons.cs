@@ -21,6 +21,8 @@ public abstract class Weapons : MonoBehaviour
     private bool is_firing;
 
     private float time_shot=0f;
+    private int current_burst_shot_number;
+    private bool fire_successful;
 
     //variables for how many shots are fired per burst and how much time is in between each burst, respectively
     public int burst_count=3;
@@ -62,6 +64,22 @@ public abstract class Weapons : MonoBehaviour
         {
             TryFire();
         }
+
+        if (FT==FireType.Burst && Input.GetMouseButtonDown(0))
+        {
+            // burst_start_time=Time.time
+            current_burst_shot_number=1;
+            while(current_burst_shot_number<burst_count+1)
+            {
+                fire_successful=false;
+                TryFire();
+                if (fire_successful)
+                {
+                    current_burst_shot_number+=1;
+                }
+            }
+        }
+        
     }
 
     public void OnShoot(InputValue value)
@@ -101,11 +119,12 @@ public abstract class Weapons : MonoBehaviour
                         break;
                     case FireType.Burst:
                         //burst Fire
-                        for (int i=0; i<burst_count+1; i++)
+                        if(Time.time-time_shot>=burst_delay)
                         {
                             Fire();
+                            fire_successful=true;
+                            Debug.Log("burst");
                         }
-                        Debug.Log("burst");
                         break;
                 }
             }
