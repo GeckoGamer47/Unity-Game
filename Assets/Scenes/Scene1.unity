@@ -571,11 +571,13 @@ MonoBehaviour:
   accuracy: 1
   spread: 2
   bullet_size: 1
-  ammo_count: 900
-  ammo_reserve: 0
-  reload_time: 1
-  burst_count: 3
-  burst_delay: 0.05
+  ammo_count: 10
+  magazine_size: 25
+  ammo_reserve: 200
+  max_ammo_reserve: 200
+  reload_time: 2
+  burst_count: 5
+  burst_delay: 0.2
   FT: 2
   firePoint: {fileID: 765549221}
   bulletPrefab: {fileID: 8228514196450245013, guid: c5cb79e410ed2ab4ebefd55e6bd4023c, type: 3}
