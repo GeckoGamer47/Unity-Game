@@ -12,6 +12,6 @@ public class weapon_look_at_mouse : MonoBehaviour
     void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		transform.rotation = Quaternion.LookRotation(Vector3.forward, mousePos - transform.position);
+		transform.rotation = Quaternion.LookRotation(Vector3.forward, mousePos - transform.position) * Quaternion.Euler(0f,0f,90);
     }
 }
