@@ -7,6 +7,10 @@ public abstract class Weapons : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public int bullet_count;
+<<<<<<< HEAD
+=======
+    public float fire_rate;
+>>>>>>> db06938b4f2c884d445d161d8ed9cd10d7c01287
     public float min_fire_delay;
     public float spread; //will use separately from accuracy when shooting multiple bullets
     // public int bullet_speed;
@@ -15,7 +19,11 @@ public abstract class Weapons : MonoBehaviour
     // public int ammo_modifier;
     public int ammo_reserve;
     public int max_ammo_reserve;
+<<<<<<< HEAD
     public float reload_time;
+=======
+    public int reload_time;
+>>>>>>> db06938b4f2c884d445d161d8ed9cd10d7c01287
     // public int reload_speed; //a modifier for reload time
     private bool is_reloading;
     private bool is_firing;
@@ -175,3 +183,10 @@ public abstract class Weapons : MonoBehaviour
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+// fix burst only shooting once
+// declutter debug logs
+>>>>>>> db06938b4f2c884d445d161d8ed9cd10d7c01287

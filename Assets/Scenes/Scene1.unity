@@ -497,6 +497,7 @@ Transform:
 --- !u!1001 &3638176887515127924
 PrefabInstance:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
@@ -551,6 +552,48 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48f63d2bf40fff24bb076f192e6542a5, type: 3}
+=======
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498454334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 039a528f7b0fa0c4c888d29f9aa235ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1498454338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498454334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8f7f83073ed8d46b8691a08211bce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet_count: 1
+  fire_rate: 1
+  min_fire_delay: 0.05
+  accuracy: 1
+  spread: 2
+  bullet_size: 1
+  ammo_count: 10
+  magazine_size: 25
+  ammo_reserve: 200
+  max_ammo_reserve: 200
+  reload_time: 2
+  burst_count: 5
+  burst_delay: 0.2
+  FT: 2
+  firePoint: {fileID: 765549221}
+  bulletPrefab: {fileID: 8228514196450245013, guid: c5cb79e410ed2ab4ebefd55e6bd4023c, type: 3}
+  bullet_speed: 9
+  bullet_lifetime: 1.5
+  bullet_spread: 2
+>>>>>>> db06938b4f2c884d445d161d8ed9cd10d7c01287
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
