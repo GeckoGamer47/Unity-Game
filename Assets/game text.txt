@@ -1,0 +1,3 @@
+bullet randomizer:
+-make bullets have random stats like its damage, speed, range/lifetime, etc
+-they can also have random effects like homing, fire, piercing, etc
