@@ -156,7 +156,10 @@ MonoBehaviour:
   burst_count: 5
   burst_delay: 0.2
   bullet_size: 1
+<<<<<<< HEAD
   slot_number: 4
+=======
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
   FT: 0
   firePoint: {fileID: 6042025587669811801}
   bulletPrefab: {fileID: 8228514196450245013, guid: c5cb79e410ed2ab4ebefd55e6bd4023c, type: 3}

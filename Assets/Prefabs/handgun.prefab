@@ -60,7 +60,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.007, y: 0.008, z: 0}
+<<<<<<< HEAD
   m_LocalScale: {x: 4.5, y: 4.5, z: 3.3372}
+=======
+  m_LocalScale: {x: 6.6744, y: 6.6744, z: 3.3372}
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1168194799455451250}
@@ -110,7 +114,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
+<<<<<<< HEAD
   m_Sprite: {fileID: -5018957584637639877, guid: 033d81657e9e0f04d892eba56cda8b94, type: 3}
+=======
+  m_Sprite: {fileID: -4637937412519905047, guid: 135c9dd47a6936f48ba1575de6c2669e, type: 3}
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -156,7 +164,10 @@ MonoBehaviour:
   burst_count: 5
   burst_delay: 0.2
   bullet_size: 0.95
+<<<<<<< HEAD
   slot_number: 1
+=======
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
   FT: 0
   firePoint: {fileID: 1168194799455451250}
   bulletPrefab: {fileID: 8228514196450245013, guid: c5cb79e410ed2ab4ebefd55e6bd4023c, type: 3}

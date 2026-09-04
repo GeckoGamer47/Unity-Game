@@ -18,6 +18,7 @@ public class weapon_look_at_mouse : MonoBehaviour
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		transform.rotation = Quaternion.LookRotation(Vector3.forward, mousePos - transform.position) * Quaternion.Euler(0f,0f,90);
+<<<<<<< HEAD
 
         float zRot = transform.localEulerAngles.z;
 
@@ -30,5 +31,7 @@ public class weapon_look_at_mouse : MonoBehaviour
         {
             spriteRend.flipY = true;
         }
+=======
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
     }
 }
