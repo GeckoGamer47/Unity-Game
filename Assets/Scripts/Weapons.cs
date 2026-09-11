@@ -7,6 +7,16 @@ public abstract class Weapons : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public int bullet_count;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    public float fire_rate;
+>>>>>>> db06938b4f2c884d445d161d8ed9cd10d7c01287
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
     public float min_fire_delay;
     public float spread; //will use separately from accuracy when shooting multiple bullets
     // public int bullet_speed;
@@ -15,12 +25,31 @@ public abstract class Weapons : MonoBehaviour
     // public int ammo_modifier;
     public int ammo_reserve;
     public int max_ammo_reserve;
+<<<<<<< HEAD
     public float reload_time;
+=======
+<<<<<<< HEAD
+    public float reload_time;
+=======
+<<<<<<< HEAD
+    public float reload_time;
+=======
+    public int reload_time;
+>>>>>>> db06938b4f2c884d445d161d8ed9cd10d7c01287
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
     // public int reload_speed; //a modifier for reload time
 
     private float time_shot=0f;
     private bool is_bursting=false;
     // private int current_burst_shot_number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    private bool can_shoot;
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
     // private int burst_attempt_number;
 
     //variables for how many shots are fired per burst and how much time is in between each burst, respectively
@@ -32,9 +61,18 @@ public abstract class Weapons : MonoBehaviour
     private float fire_rate;
     private int accuracy;
 
+<<<<<<< HEAD
     public int slot_number;
     public bool is_active;
 
+=======
+<<<<<<< HEAD
+    public int slot_number;
+    public bool is_active;
+
+=======
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
     public enum FireType
     {
         Semi,
@@ -61,7 +99,15 @@ public abstract class Weapons : MonoBehaviour
     private IEnumerator BurstRoutine()
     {
         is_bursting=true;
+<<<<<<< HEAD
         GameMaster.can_shoot=false;
+=======
+<<<<<<< HEAD
+        GameMaster.can_shoot=false;
+=======
+        can_shoot=false;
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
         for (int i=0; i<burst_count;i++)
         {
             // if i<burst_count--;
@@ -73,15 +119,37 @@ public abstract class Weapons : MonoBehaviour
             Fire();
             yield return new WaitForSeconds(burst_delay);
         }
+<<<<<<< HEAD
         time_shot=Time.time+fire_rate;
         is_bursting=false;
         GameMaster.can_shoot=true;
+=======
+<<<<<<< HEAD
+        time_shot=Time.time+fire_rate;
+        is_bursting=false;
+        GameMaster.can_shoot=true;
+=======
+        min_fire_delay=Time.time+fire_rate;
+        is_bursting=false;
+        can_shoot=true;
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
     }
 
     private IEnumerator ReloadRoutine()
     {
+<<<<<<< HEAD
         GameMaster.is_reloading=true;
         GameMaster.can_shoot=false;
+=======
+<<<<<<< HEAD
+        GameMaster.is_reloading=true;
+        GameMaster.can_shoot=false;
+=======
+        is_reloading=true;
+        can_shoot=false;
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
         yield return new WaitForSeconds(reload_time);
         if (magazine_size>ammo_reserve)
         {
@@ -93,8 +161,18 @@ public abstract class Weapons : MonoBehaviour
             ammo_reserve-=magazine_size;
             ammo_count=magazine_size;
         }
+<<<<<<< HEAD
         GameMaster.is_reloading=false;
         GameMaster.can_shoot=true;
+=======
+<<<<<<< HEAD
+        GameMaster.is_reloading=false;
+        GameMaster.can_shoot=true;
+=======
+        is_reloading=false;
+        can_shoot=true;
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
     }
 
     void Awake()
@@ -110,15 +188,26 @@ public abstract class Weapons : MonoBehaviour
         {
             TryFire();
         }
+<<<<<<< HEAD
 
         if (is_active==false)
         {
             GetComponent<SpriteRenderer>().enabled = false;
+<<<<<<< HEAD
         }
         else
         {
             GetComponent<SpriteRenderer>().enabled = true;
         }
+=======
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().enabled = true;
+        }
+=======
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
     }
         
     
@@ -140,18 +229,43 @@ public abstract class Weapons : MonoBehaviour
         }
         else if(GameMaster.is_reloading==false && ammo_count>0 && is_active==true)
         {
+<<<<<<< HEAD
             // Debug.Log("test");
             if(Time.time-time_shot>=min_fire_delay)
             {
                 // Debug.Log("shoot");
                 Debug.Log(ammo_count);
                 GameMaster.can_shoot=true;
+=======
+<<<<<<< HEAD
+            // Debug.Log("test");
+            if(Time.time-time_shot>=min_fire_delay)
+            {
+                // Debug.Log("shoot");
+                Debug.Log(ammo_count);
+                GameMaster.can_shoot=true;
+=======
+            Debug.Log("test");
+            if(Time.time-time_shot>=min_fire_delay)
+            {
+                Debug.Log("shoot");
+                Debug.Log(ammo_count);
+                can_shoot=true;
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
                 
 
                 switch(FT)
                 {
                     case FireType.Semi:
                         //semiautomatic Fire
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                        Debug.Log("semiauto");
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
                         ammo_count-=1;
                         Fire();
                         time_shot=Time.time;
@@ -160,6 +274,13 @@ public abstract class Weapons : MonoBehaviour
                         //automatic Fire
                         //the rest of the auto function is in Update()
                         Fire();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                        Debug.Log("auto");
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
                         ammo_count-=1;
                         time_shot=Time.time;
                         break;
@@ -169,6 +290,13 @@ public abstract class Weapons : MonoBehaviour
                             {
                                 StartCoroutine(BurstRoutine());
                             }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                            Debug.Log("burst");
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
                         break;
                 }
             }
@@ -181,3 +309,16 @@ public abstract class Weapons : MonoBehaviour
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+// fix burst only shooting once
+// declutter debug logs
+>>>>>>> db06938b4f2c884d445d161d8ed9cd10d7c01287
+>>>>>>> df1f70b38748027a4ec830bcd031dd660be887e0
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8

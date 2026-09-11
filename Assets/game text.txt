@@ -1,6 +1,10 @@
 bullet randomizer:
 -make bullets have random stats like its damage, speed, range/lifetime, etc
+<<<<<<< HEAD
 -they can also have random effects like homing, fire, piercing, etc
 
 bullet manager:
 -
+=======
+-they can also have random effects like homing, fire, piercing, etc
+>>>>>>> 1889f49c961d848f87bc9c3abf9067e0a07a54b8
