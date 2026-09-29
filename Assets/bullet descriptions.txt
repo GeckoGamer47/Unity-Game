@@ -1,0 +1,10 @@
+uranium crystal bullet
+-pierces infinitely through enemies
+-leaves behind crystal shards on each enemy it hits that explode after a second
+
+poison bottle bullet
+-creates a trail of poison as it travels
+-creates a large pool of poison after it hits/lands
+-DoT effect on enemies in the poison
+-bullets traveling over the poison will become tipped and inflict enemies with a DoT effect
+-poison is electrifiable

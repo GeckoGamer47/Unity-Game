@@ -8,8 +8,6 @@ public class Pistol : Weapons
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float bullet_speed=12f;
     [SerializeField] private float bullet_lifetime=10f;
-    [SerializeField] private float bullet_spread=0f;
-    // Random rand=new Random();
 
     protected override void Fire()
     {
@@ -19,7 +17,7 @@ public class Pistol : Weapons
             Debug.Log("no prefab or firepoint");
             return;
         }
-        Vector2 direction=GetMouseDirection(bullet_spread);
+        Vector2 direction=GetMouseDirection(spread);
 
 
         float angle = Mathf.Atan2(direction.y,direction.x)*Mathf.Rad2Deg-90f;
@@ -30,3 +28,7 @@ public class Pistol : Weapons
         Destroy(bullet,bullet_lifetime);
     }
 }
+
+// to do:
+// make shoot work with multiple bullets at once
+// make shotgun reloading work
